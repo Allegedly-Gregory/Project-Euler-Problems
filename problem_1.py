@@ -1,5 +1,10 @@
+#--------Problem 1 Project Euler--------#
+#---------Multiples of 3 and 5----------#
+"""
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
-
+Find the sum of all the multiples of 3 or 5 below 1000.
+"""
 #way I tried
 def multiples(num):
     numlist = []
@@ -8,25 +13,6 @@ def multiples(num):
             numlist.append(x)
         elif x % 5 == 0:
             numlist.append(x)
-    return numlist[1:]
+    return sum(numlist[1:])
 
 print(multiples(1000))
-
-
-#smarter solution
-def problem1():
-    x=0
-    for i in range (0, 1000, 3):
-        if not (i % 3 and i % 5): x+=i
-    return x
-
-problem1()
-
-
-
-
-
-
-
-
-
